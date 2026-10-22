@@ -5,6 +5,7 @@ app = Flask(__name__)
 
 @app.route('/fast')
 def fast():
+    time.sleep(0.5)  # 故意让它慢 500ms，突破 300ms 的底线
     return "ok"
 
 @app.route('/slow')
